@@ -1,0 +1,18 @@
+{
+  "WishList": [
+    {
+      "WishListId": 99,
+      "SongID": 18,
+      "SongTitle": "Fake",
+      "artistID": 32,
+      "artistName": "Great Singer"
+    },
+    {
+      "WishListId": 1,
+      "SongID": 32,
+      "SongTitle": "Respect",
+      "artistID": 37,
+      "artistName": "Aretha Franklin"
+    }
+  ]
+}
