@@ -2,7 +2,7 @@ import getWishList from '../getWishList';
 
 test('Verify getWishList returns a json array', signalEndOfTest => {
   async function asynchTest() {
-    const json = await getWishList(84);
+    const json = await getWishList('testWishList.json');
     expect(Array.isArray(json)).toBe(true);
     signalEndOfTest();
   }
