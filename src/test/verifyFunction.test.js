@@ -1,3 +1,4 @@
+import verifyFunction from '../verifyFunction';
 test('Verify function can be called', () => {
-  expect(verifyTest()).toBe('VERIFIED');
+  expect(verifyFunction()).toBe('VERIFIED');
 });
