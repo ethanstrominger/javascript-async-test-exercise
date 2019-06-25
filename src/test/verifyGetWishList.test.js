@@ -2,8 +2,14 @@ import getWishList from '../getWishList';
 
 test('Verify getWishList returns a json array', signalEndOfTest => {
   async function asynchTest() {
-    const json = await getWishList('testWishList.json');
-    expect(Array.isArray(json)).toBe(true);
+    const jsonArray = await getWishList('testWishList.json');
+    expect(Array.isArray(jsonArray)).toBe(true);
+    const json = jsonArray[0];
+    expect(json.WishListID).toBeDefined();
+    expect(json.SongID).toBeDefined();
+    expect(typeof json.SongTitle).toBe('string');
+    expect(json.ArtistID).toBeDefined();
+    expect(typeof json.ArtistName).toBe('string');
     signalEndOfTest();
   }
   asynchTest();
@@ -12,12 +18,7 @@ test('Verify getWishList returns a json array', signalEndOfTest => {
 // test('Verify get retrieves expected values', signalEndOfTest => {
 //   async function asynchTest() {
 //     const json = await getWishList(1, 'testWishList.json');
-//     expect(json.wishListID).toBe(1);
-//     expect(json.songID).toBe(32);
-//     expect(typeof json.songTitle).toBe('Respect');
-//     expect(json.artistID).toBe(37);
-//     expect(json.artistName).toBe('Aretha Franklin');
-//     signalEndOfTest();
+
 //   }
 //   asynchTest();
 // });
